@@ -40,15 +40,16 @@ role. Do not edit a color value in a theme file. To change a theme:
 CI fails if a committed theme differs from the generator output. To try a change,
 run `./install.sh`, then `wal --theme kanagawa-wave`.
 
-The images in `assets/` are rendered, not captured by hand. After changing a
-theme, run this from the repository root and commit the new images:
+The images in `assets/` are screenshots of real foot windows, taken in a
+headless session, so no window opens on your screen. After changing a theme, run
+this from the repository root and commit the new images:
 
 ```sh
-bash <(curl -fsSL https://raw.githubusercontent.com/kanagawa-community/.github/main/scripts/render-previews.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/kanagawa-community/.github/main/scripts/capture-windows.sh)
 ```
 
-It fetches the shared preview scripts from the
-[.github repository](https://github.com/kanagawa-community/.github). `scripts/preview.sh` holds the port-specific part
-and needs `bash`, `tmux`, `eza`, `fastfetch`, and `rsync`. It does not need pywal. See the
-[preview standard](https://github.com/kanagawa-community/.github/blob/main/docs/PREVIEWS.md)
+It fetches the shared capture scripts from the
+[.github repository](https://github.com/kanagawa-community/.github).
+`scripts/window.sh` holds the part for this port and needs foot, pywal, fastfetch, eza. See the
+[preview standard](https://github.com/kanagawa-community/.github/blob/main/docs/PREVIEWS.md#capturing-application-windows)
 for the rest.

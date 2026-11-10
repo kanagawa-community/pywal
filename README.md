@@ -34,9 +34,6 @@
 
 ## Previews
 
-The images are rendered from the palette's terminal colors, the same values
-that this theme sets.
-
 ![Terminal windows with Kanagawa Lotus, Dragon and Wave](assets/showcase.png)
 
 <details>
